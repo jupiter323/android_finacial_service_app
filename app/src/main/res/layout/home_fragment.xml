@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            tools:context=".activities.home.fragment.HomeFragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@android:color/transparent"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/semibold"
+                    android:text="@string/txt_my_wallet"
+                    android:textColor="@android:color/white" />
+
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edt_margin_between"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/bold"
+                    android:gravity="top"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="689.56"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/txtCurrencySign"
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="05dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/semibold"
+
+                    android:gravity="bottom"
+                    android:text="@string/txtCurrencySign"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="@string/txt_jackpot_msg"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/edtTxtSize"
+                android:visibility="gone" />
+
+
+            <android.support.design.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:id="@+id/llScan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_effect_normal"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/minEdtHeight"
+                            android:layout_height="@dimen/minEdtHeight"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_scan" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/bold"
+                            android:longClickable="false"
+                            android:text="@string/txt_scan"
+                            android:textColor="@color/primary_theme_color_one"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/edtTxtSize" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/color_c3c3c3"></LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llAddMoney"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_effect_normal"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/minEdtHeight"
+                            android:layout_height="@dimen/minEdtHeight"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/wallet_add_money_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/bold"
+                            android:longClickable="false"
+                            android:text="@string/txt_add"
+                            android:textColor="@color/primary_theme_color_one"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/edtTxtSize" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/color_c3c3c3"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSendMoney"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_effect_normal"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/minEdtHeight"
+                            android:layout_height="@dimen/minEdtHeight"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/wallet_send_money_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/bold"
+                            android:text="@string/txt_send"
+                            android:textColor="@color/primary_theme_color_one"
+                            android:textSize="@dimen/edtTxtSize" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/color_c3c3c3"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llWithdrawMoney"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_effect_normal"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/minEdtHeight"
+                            android:layout_height="@dimen/minEdtHeight"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_wallet_withdraw_money_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/bold"
+                            android:text="@string/txt_withdrawn"
+                            android:textColor="@color/primary_theme_color_one"
+                            android:textSize="@dimen/edtTxtSize" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="center">
+
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_bg_offer"
+                   android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ipant.activities.home.fragment.viewmodels.HomeViewModel" />
+
+    </data>
+
+
+</layout>
+
+
+
