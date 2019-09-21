@@ -124,6 +124,7 @@ public class HomeFragment extends BaseFragment implements NetworkConn.onRequestR
     public void onResume() {
         super.onResume();
         mHomeFragmentBinding.txtAmount.setText(AppConstants.WALLET_AMOUNT);
+        mViewModel.getWalletBalance();
     }
 
     @Override

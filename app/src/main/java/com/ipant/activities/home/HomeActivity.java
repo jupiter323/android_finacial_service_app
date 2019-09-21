@@ -14,6 +14,7 @@ import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -68,6 +69,12 @@ public class HomeActivity extends BaseActivity
             intent.putExtras(bundle);
         }
         return intent;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e("test: ", AppConstants.WALLET_AMOUNT + "");
     }
 
     @Override
