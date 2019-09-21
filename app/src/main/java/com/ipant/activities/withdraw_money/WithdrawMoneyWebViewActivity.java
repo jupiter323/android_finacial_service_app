@@ -58,7 +58,8 @@ public class WithdrawMoneyWebViewActivity extends AppCompatActivity {
                 new TrustlyJavascriptInterface(this), TrustlyJavascriptInterface.NAME);
         myWebView.loadData("", "text/html", null);
 
-        String mobile_no =  AppConstants.USER_DATA_BEAN_OBJ.getData().get(0).getMobileNo();
+        String mobile_no =  AppConstants.USER_DATA_BEAN_OBJ == null ? "" : "" + AppConstants.USER_DATA_BEAN_OBJ.getData().get(0).getMobileNo();
+        String email = AppConstants.USER_DATA_BEAN_OBJ == null ? "placeholder@mailinator.com" : "" + AppConstants.USER_DATA_BEAN_OBJ.getData().get(0).getEmail()!=null? AppConstants.USER_DATA_BEAN_OBJ.getData().get(0).getEmail():"placeholder@mailinator.com";
         String appv = BuildConfig.VERSION_NAME;
         String auth = AppConstants.USER_DATA_BEAN_OBJ == null ? "" : "" + AppConstants.USER_DATA_BEAN_OBJ.getData().get(0).getAuthorization();
         String timezone = TimeZone.getDefault().getID();
@@ -66,7 +67,8 @@ public class WithdrawMoneyWebViewActivity extends AppCompatActivity {
         String fcmt = AppConstants.FCM_TOKEN;
 
 
-        String url = "https://admin.ipant.se/paymentserver/example/www/withdraw.php?enduserid="+mobile_no+"&auth="+auth+"&appv="+appv+"&timezone="+timezone+"&lan="+lan+"&dev=android"+"&fcmt="+fcmt;
+
+        String url = "https://admin.ipant.se/paymentserver/example/www/withdraw.php?enduserid="+mobile_no+"&auth="+auth+"&appv="+appv+"&timezone="+timezone+"&lan="+lan+"&dev=android"+"&fcmt="+fcmt+"&email="+email;
         Log.d("sendurl:", url);
         myWebView.loadUrl(url);
     }

@@ -282,13 +282,7 @@ public class NetworkConn {
 
 
     public Request createGetRequest(String url) {
-
-        Log.d("auth",AppConstants.USER_DATA_BEAN_OBJ.getData().get(0).getAuthorization());
-        Log.d("app version :",BuildConfig.VERSION_NAME);
-        Log.d("device id :",AppConstants.FCM_TOKEN);
-        Log.d("language : ", AppConstants.LANGUAGE );
-        Log.d("timezone :",  TimeZone.getDefault().getID());
-
+        Log.d("token :", AppConstants.USER_DATA_BEAN_OBJ.getData().get(0).getAuthorization());
         // RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
                 .url(url)
