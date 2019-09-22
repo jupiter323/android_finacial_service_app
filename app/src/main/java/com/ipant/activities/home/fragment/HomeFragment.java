@@ -125,6 +125,9 @@ public class HomeFragment extends BaseFragment implements NetworkConn.onRequestR
         super.onResume();
         mHomeFragmentBinding.txtAmount.setText(AppConstants.WALLET_AMOUNT);
         mViewModel.getWalletBalance();
+        new android.os.Handler().postDelayed(
+                () -> mViewModel.getWalletBalance(), 2000
+        );
     }
 
     @Override
